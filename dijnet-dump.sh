@@ -3,15 +3,15 @@
 # Copyright (c) 2016-2022 Sandor Balazsi and others
 # This software may be distributed under the terms of the Apache 2.0 license
 
-if ! type xmllint wget xxd &>/dev/null || [[ ${BASH_VERSINFO[0]} < 4 ]]; then
-  echo "Dependency missing! Please install them:" >&2
-  echo "- debian/ubuntu: apt-get install wget xxd libxml2-utils" >&2
-  echo "- fedora: dnf install wget vim-common findutils" >&2
-  echo "- openwrt/lede: opkg install bash wget xxd libxml2-utils" >&2
-  echo "- macos: brew install bash wget libxml2" >&2
-  echo "- cygwin: setup-x86.exe -qP wget,xxd,libxml2" >&2
-  exit 1
-fi
+#if ! type xmllint wget xxd &>/dev/null || [[ ${BASH_VERSINFO[0]} < 4 ]]; then
+#  echo "Dependency missing! Please install them:" >&2
+#  echo "- debian/ubuntu: apt-get install wget xxd libxml2-utils" >&2
+#  echo "- fedora: dnf install wget vim-common findutils" >&2
+#  echo "- openwrt/lede: opkg install bash wget xxd libxml2-utils" >&2
+#  echo "- macos: brew install bash wget libxml2" >&2
+#  echo "- cygwin: setup-x86.exe -qP wget,xxd,libxml2" >&2
+#  exit 1
+#fi
 
 die() {
   EXIT_CODE="$?" && printf "$*" >&2 && exit 1
